@@ -1,0 +1,44 @@
+#first-block {
+text-align:center;
+padding:3.5em 0;
+background-image: url(../img/pg-bg.png); 
+background-size: auto auto;
+background-repeat: no-repeat;
+background-position: center;
+opacity: 6.6;
+}
+footer {
+background:#fff;
+padding:3.5em 0;
+}
+
+/* sticky footer css */
+html {
+height: 100%;
+overflow: hidden;
+}
+ 
+body {
+height: 100%;
+overflow: scroll;
+}
+ 
+.with-sticky-footer {
+height: 100%;
+width: 100%; 
+background-repeat: no-repeat;
+display: table;
+table-layout: relative;
+}
+ 
+.sticky-footer {
+display: table-row;
+height: 1px;
+} 
+
+
+@media screen and (max-width: 768px) {
+  .right {
+  float:none;
+  }
+}
