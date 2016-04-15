@@ -126,6 +126,7 @@
                                 <div class="row">
                                     <div class="panel-body">
                                         <div class="dataTable_wrapper">
+                                        <a style="float:right;" href="addteacher.php"><img src="img/user_add.png" height="30px" style="float:center;" ><br>Add teacher</a><br><br>
                                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                         <thead>
                                             <tr>
@@ -157,7 +158,7 @@
                                          <?php 
                                              include('connection.php');
                                              
-                                             $qry = "SELECT TeacherID,Username,Password,Firstname,Lastname,Middlename,Email,Section from teacher_login";
+                                             $qry = "SELECT TeacherID,Username,Password,Firstname,Lastname,Middlename,Email,Section from teacher_login where Active='Yes'";
                                              $result = mysql_query($qry);
                                                 while($qry = mysql_fetch_array($result))
                                                 {
@@ -181,7 +182,7 @@
                                                     $pass
                                                 </td>
                                                 <td>
-                                                    $lname , $fname $mname
+                                                     $fname $mname $lname
                                                 </td>
                                                 <td>
                                                     $email

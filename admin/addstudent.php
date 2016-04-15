@@ -15,11 +15,8 @@ $admin = $_SESSION['Username'];
     <meta name="description" content="">
     <meta name="author" content="">
 
-<<<<<<< HEAD
     <title>Admin</title>
-=======
     <title>MathBox | Admin Page</title>
->>>>>>> origin/master
 
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
@@ -106,9 +103,7 @@ $admin = $_SESSION['Username'];
                 <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-<<<<<<< HEAD
                     <h1 class="page-header">Adding Student </h1>
-=======
                     <h1 class="page-header">Add Student</h1>
                     <div class="panel panel-default">
                         <div class="panel-body">
@@ -162,7 +157,6 @@ $admin = $_SESSION['Username'];
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
->>>>>>> origin/master
                 </div>
                 <!-- /.col-lg-12 -->
             </div>

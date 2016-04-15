@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+include('connection.php');
+session_start();
+$_SESSION['Username'];
+$admin = $_SESSION['Username'];
+
+?>
+
 <html lang="en">
 <head>
 
@@ -8,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Admin</title>
 
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
@@ -29,7 +36,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Mathbox</a> <!-- logo dapat ng mathbox-->
+                <a class="navbar-brand" href="index.php"><img src="../images/MathBox.png" height="50" width="50"></a> <!-- logo dapat ng mathbox-->
             </div>
             <!-- /.navbar-header -->
 
@@ -92,14 +99,41 @@
             <!-- /.navbar-static-side -->
         </nav>
 
-        <div id="page-wrapper">
+                <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Dashboard</h1>
+                    <h1 class="page-header">Creating New Section</h1>
                 </div>
+                <!-- /.col-lg-12 -->
             </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form method="POST" action="addsectionexe.php">
+                                        <div class="form-group">
+                                            <label>Class Name</label>
+                                            <input name="Class" class="form-control" placeholder="Enter text">
+                                        </div>
+                                        <button type="submit" name="submit" class="btn btn-default">Add</button>
+                                    </form>
+                                </div>
+                            </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
         </div>
-                        </div> <!-- /#wrapper -->
+        <!-- /#page-wrapper -->
+
+    </div>
+    </div> <!-- /#wrapper -->
 
     <!-- jQuery -->
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>

@@ -131,6 +131,7 @@
                                 <div class="row">
                                     <div class="panel-body">
                                         <div class="dataTable_wrapper">
+                                        <a style="float:right;" href="addsection.php"><img src="img/user_add.png" height="30px" style="float:center;" ><br>Add section</a><br><br>
                                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                         <thead>
                                             <tr>
@@ -153,11 +154,11 @@
                                          <?php 
                                              include('connection.php');
                                              
-                                             $qry = "SELECT ClassID,Section,Prof from tblsection";
+                                             $qry = "SELECT ID,Section,Prof from tblsection where Active='Yes'";
                                              $result = mysql_query($qry);
                                                 while($qry = mysql_fetch_array($result))
                                                 {
-                                                    $id = $qry['ClassID'];
+                                                    $id = $qry['ID'];
                                                     $section = $qry['Section'];
                                                     $prof = $qry['Prof'];
 
@@ -172,9 +173,8 @@
                                                     $prof
                                                 </td>                                              
                                                 <td>
-                                                    <a href='addsection.php?ClassID=$id'>Add</a>
                                                     <a href='editsection.php?ClassID=$id'>Edit</a>
-                                                    <a href='deletestudent.php?ClassID=$id'>Delete</a>
+                                                    <a href='deletesection.php?ClassID=$id'>Delete</a>
 
                                                 </td>                       
                                               </tr>";

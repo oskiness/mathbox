@@ -166,7 +166,7 @@
                                          <?php 
                                              include('connection.php');
                                              
-                                             $qry = "SELECT StudentID,Username,Firstname,Middlename,Lastname,EmailAddress,Section,Prof from student_login";
+                                             $qry = "SELECT StudentID,Username,Firstname,Middlename,Lastname,EmailAddress,Section,Prof  from student_login where Active='Yes'";
                                              $result = mysql_query($qry);
                                                 while($qry = mysql_fetch_array($result))
                                                 {

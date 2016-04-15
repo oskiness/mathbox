@@ -19,7 +19,7 @@
 					}
 					else
 						{
-							mysql_query("INSERT into teacher_login(Firstname,Lastname,Middlename,Section) values('$fname','$lname','$mname','$section')");
+							mysql_query("INSERT into teacher_login(Firstname,Lastname,Middlename,Section,Active) values('$fname','$lname','$mname','$section','Yes')");
 							echo 
 							"<script type='text/javascript'>
 							 alert('Your Have been Add a teacher.');

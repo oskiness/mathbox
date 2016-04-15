@@ -42,7 +42,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                <a class="navbar-brand" href="index.html"><img src="../images/MathBox.png" height="50" width="50"></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -58,7 +58,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -102,11 +102,13 @@
                                     <a href="studentarchive.php">Student Archive</a>
                                 </li>
                                 <li>
+                                    <a href="lessonarchive.php">Lesson Archive</a>
+                                </li>
+                                <li>
                                     <a href="sectionarchive.php">Section Archive</a>
                                 </li>
                             </ul>
-                            
-                        </li>
+                            </li>
                         <li>
                             <a href="contentapproval.php"><i class="fa fa-sitemap fa-fw"></i>Content Approval</a>
                         </li>
@@ -123,12 +125,112 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header"><center>Dashboard</h1>
+                    <h1 class="page-header"><center>Student List</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-           
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <!-- /.panel-heading -->
+                                <div class="row">
+                                    <div class="panel-body">
+                                        <div class="dataTable_wrapper">
+                                        <a style="float:right;" href="addstudent.php"><img src="img/user_add.png" height="30px" style="float:center;" ><br>Add student</a><br><br>
+                                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Student ID
+                                                </th>
+                                                <th>
+                                                    Username
+                                                </th>
+                                                 <th>
+                                                    Fullname
+                                                </th>  
+                                                <th>
+                                                    EmailAddress
+                                                </th> 
+                                                <th>
+                                                    Teacher
+                                                </th>
+                                                <th>
+                                                    Section
+                                                </th> 
+                                                <th>
+                                                    Action
+                                                </th> 
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                         <?php 
+                                             include('connection.php');
+                                             
+                                             $qry = "SELECT StudentID,Username,Firstname,Middlename,Lastname,EmailAddress,Section,Prof  from student_login where Active='No'";
+                                             $result = mysql_query($qry);
+                                                while($qry = mysql_fetch_array($result))
+                                                {
+                                                    $id = $qry['StudentID'];
+                                                    $user = $qry['Username'];
+                                                    $fname = $qry['Firstname'];
+                                                    $lname = $qry['Lastname'];
+                                                    $mname = $qry['Middlename'];
+                                                    $email = $qry['EmailAddress'];
+                                                    $section = $qry['Section'];
+                                                    $prof = $qry['Prof'];
+                                            echo "
+                                                <tr class='success'>
+                                                <td>
+                                                    $id
+                                                </td>
+                                                <td>
+                                                    $user
+                                                </td>
+                                                <td>
+                                                    $lname , $fname $mname
+                                                </td>
+                                                <td>
+                                                    $email
+                                                </td>
+                                                <td>
+                                                    $prof
+                                                </td>
+                                                <td>
+                                                    $section
+                                                </td>
+                                              
+                                                <td>
+                                                    <a href='restorestudent.php?StudentID=$id'>Restore</a>
+                                                    <a href='totallydeletestudent.php?StudentID=$id'>Delete</a>
+
+                                                </td>                       
+                                              </tr>";
+                                              }
+
+                                             ?>
+                                             </tbody>
+                                         </table>
+                                                </div>
+                                                <!-- /.table-responsive -->
+                                            </div>
+                                        </div>
+                                        <!-- /.row -->
+                                    </div>
+                                        <!-- /.panel-body -->
+                                    </div>
+                                </div>          
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->

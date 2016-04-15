@@ -135,10 +135,7 @@ $admin = $_SESSION['Username'];
                                                     $rsl = mysql_query($qry);
                                                     while($qry = mysql_fetch_array($rsl)){
                                                         $Section = $qry['Section'];
-                                                        ?>     
-                                                <option>
-                                                    ----Select Section----
-                                                </option>                                           
+                                                        ?>                                              
                                                 <option>
                                                     <?php echo $Section; ?>
                                                 </option>
