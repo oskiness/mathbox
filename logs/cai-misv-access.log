@@ -7121,3 +7121,16 @@
 127.0.0.1 - - [15/Apr/2016:10:19:13 +0800] "GET /teacher/img/addstudent.png HTTP/1.1" 304 -
 127.0.0.1 - - [15/Apr/2016:10:19:13 +0800] "GET /images/MathBox.png HTTP/1.1" 304 -
 127.0.0.1 - - [15/Apr/2016:10:19:14 +0800] "GET /teacher/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css HTTP/1.1" 304 -
+127.0.0.1 - - [15/Apr/2016:13:12:51 +0800] "GET / HTTP/1.1" 200 4778
+127.0.0.1 - - [15/Apr/2016:13:12:54 +0800] "GET /js/jquery.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Apr/2016:13:12:54 +0800] "GET /css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [15/Apr/2016:13:12:54 +0800] "GET /css/camera.css HTTP/1.1" 304 -
+127.0.0.1 - - [15/Apr/2016:13:12:55 +0800] "GET /js/jquery.mobile.customized.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Apr/2016:13:12:55 +0800] "GET /js/jquery.easing.1.3.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Apr/2016:13:12:56 +0800] "GET /js/camera.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [15/Apr/2016:13:12:56 +0800] "GET /images/icon4.png HTTP/1.1" 304 -
+127.0.0.1 - - [15/Apr/2016:13:12:56 +0800] "GET /images/icon1.png HTTP/1.1" 304 -
+127.0.0.1 - - [15/Apr/2016:13:12:56 +0800] "GET /images/pic1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [15/Apr/2016:13:12:57 +0800] "GET /images/camera_skins.png HTTP/1.1" 304 -
+127.0.0.1 - - [15/Apr/2016:13:12:57 +0800] "GET /images/patterns/overlay1.png HTTP/1.1" 404 1212
+127.0.0.1 - - [15/Apr/2016:13:12:57 +0800] "GET /images/camera-loader.gif HTTP/1.1" 404 1212
