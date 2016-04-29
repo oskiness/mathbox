@@ -48,7 +48,7 @@ $admin = $_SESSION['Username'];
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="../images/MathBox.png" height="50" width="50"></a>
+                <a href="index.php"><img src="../images/MathBox.png" height="55" width="55"></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -76,8 +76,6 @@ $admin = $_SESSION['Username'];
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                   <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <!-- /input-group -->
                         <li>
                             <a href="dashboard.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
@@ -86,6 +84,9 @@ $admin = $_SESSION['Username'];
                         </li>
                         <li>
                             <a href="studentmaintenance.php"><i class="fa fa-table fa-fw"></i> Student Maintenance</a>
+                        </li>
+                        <li>
+                            <a href="lessonmaintenance.php"><i class="fa fa-edit fa-fw"></i> Lesson Maintenance</a>
                         </li>
                         <li>
                             <a href="sectionmaintenance.php"><i class="fa fa-edit fa-fw"></i> Section Maintenance</a>

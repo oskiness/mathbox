@@ -36,7 +36,7 @@ $admin = $_SESSION['Username'];
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php"><img src="../images/MathBox.png" height="50" width="50"></a> <!-- logo dapat ng mathbox-->
+                <a href="index.php"><img src="../images/MathBox.png" height="55" width="55"></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -64,16 +64,7 @@ $admin = $_SESSION['Username'];
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
+                        
                         <li>
                             <a href="dashboard.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
@@ -84,13 +75,16 @@ $admin = $_SESSION['Username'];
                             <a href="studentmaintenance.php"><i class="fa fa-table fa-fw"></i> Student Maintenance</a>
                         </li>
                         <li>
-                            <a href="sectionmaintenance.php"><i class="fa fa-edit fa-fw"></i>Section Maintenance</a>
+                            <a href="sectionmaintenance.php"><i class="fa fa-edit fa-fw"></i> Section Maintenance</a>
+                        </li>
+                        <li>
+                            <a href="lessonmaintenance.php"><i class="fa fa-edit fa-fw"></i> Lesson Maintenance</a>
                         </li>
                         <li>
                             <a href="archive.php"><i class="fa fa-wrench fa-fw"></i> Archive</a>
                         </li>
                         <li>
-                            <a href="contentapproval.php"><i class="fa fa-sitemap fa-fw"></i>Content Approval</a>
+                            <a href="contentapproval.php"><i class="fa fa-sitemap fa-fw"></i> Content Approval</a>
                         </li>
                     </ul>
                 </div>
