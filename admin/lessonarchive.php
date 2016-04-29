@@ -142,7 +142,7 @@ $admin = $_SESSION['Username'];
                                         <thead>
                                             <tr>
                                                 <th>
-                                                    ID
+                                                    Lesson ID
                                                 </th>
                                                 <th>
                                                     Lesson Name

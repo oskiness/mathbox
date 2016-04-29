@@ -35,6 +35,76 @@ $admin = $_SESSION['Username'];
     <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 
+<style type="text/css">
+@media (min-width: 32em) {
+  .modal-box { width: 70%; }
+}
+.modal-box {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  width: 98%;
+  background: white;
+  border-bottom: 1px solid #aaa;
+  border-radius: 4px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-clip: padding-box;
+}
+
+.modal-box header,
+.modal-box .modal-header {
+  padding: 1.25em 1.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-box header h3,
+.modal-box header h4,
+.modal-box .modal-header h3,
+.modal-box .modal-header h4 { margin: 0; }
+
+.modal-box .modal-body { padding: 2em 1.5em; }
+
+.modal-box footer,
+.modal-box .modal-footer {
+  padding: 1em;
+  border-top: 1px solid #ddd;
+  background: rgba(0, 0, 0, 0.02);
+  text-align: right;
+}
+
+.modal-overlay {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+a.close {
+  line-height: 1;
+  font-size: 1.5em;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  text-decoration: none;
+  color: #bbb;
+}
+
+a.close:hover {
+  color: #222;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+</style>
+
+
 <body>
 
     <div id="wrapper">
@@ -130,7 +200,21 @@ $admin = $_SESSION['Username'];
                                 <div class="row">
                                     <div class="panel-body">
                                         <div class="dataTable_wrapper">
-                                        <a style="float:right; padding-right:10px;" href="addlesson.php"><img src="img/addquiz.png" height="30px" style="float:center; padding-left:20px;" ><br>Add lesson</a><br><br>
+                                        <a style="float:right; padding-right:10px;" class="js-open-modal" href="#" data-modal="pop-up" ><img src="img/addquiz.png" height="30px" style="float:center; padding-left:20px;" ><br>Add lesson</a><br><br>
+                                    
+<div id="popup" class="modal-box">  
+  <header>
+    <a href="#" class="js-modal-close close">×</a>
+    <h3><a href="http://www.jqueryscript.net/tags.php?/Modal/">Modal</a> Title</h3>
+  </header>
+  <div class="modal-body">
+    <p>Modal Body</p>
+  </div>
+  <footer>
+    <a href="#" class="js-modal-close">Close Button</a>
+  </footer>
+</div>
+
                                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                         <thead>
                                             <tr>
@@ -245,6 +329,39 @@ $admin = $_SESSION['Username'];
                 responsive: true
         });
     });
+    </script>
+
+<script type="text/javascript">
+        $(function(){
+
+var appendthis =  ("<div class='modal-overlay js-modal-close'></div>");
+
+  $('a[data-modal-id]').click(function(e) {
+    e.preventDefault();
+    $("body").append(appendthis);
+    $(".modal-overlay").fadeTo(500, 0.7);
+    //$(".js-modalbox").fadeIn(500);
+    var modalBox = $(this).attr('data-modal-id');
+    $('#'+modalBox).fadeIn($(this).data());
+  });  
+  
+  
+$(".js-modal-close, .modal-overlay").click(function() {
+  $(".modal-box, .modal-overlay").fadeOut(500, function() {
+    $(".modal-overlay").remove();
+  });
+});
+ 
+$(window).resize(function() {
+  $(".modal-box").css({
+    top: ($(window).height() - $(".modal-box").outerHeight()) / 2,
+    left: ($(window).width() - $(".modal-box").outerWidth()) / 2
+  });
+});
+ 
+$(window).resize();
+ 
+});
     </script>
 
 </body>

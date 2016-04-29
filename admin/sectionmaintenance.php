@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+include('connection.php');
+session_start();
+$_SESSION['Username'];
+$admin = $_SESSION['Username'];
+?>
 <html lang="en">
 <head>
 
@@ -49,7 +54,7 @@
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                       Welcome Prof, <?php echo $admin ?><i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -94,6 +99,9 @@
                                     <a href="studentarchive.php">Student Archive</a>
                                 </li>
                                 <li>
+                                    <a href="lessonarchive.php">Lesson Archive</a>
+                                </li>
+                                <li>
                                     <a href="sectionarchive.php">Section Archive</a>
                                 </li>
                             </ul>
@@ -124,7 +132,7 @@
                                 <div class="row">
                                     <div class="panel-body">
                                         <div class="dataTable_wrapper">
-                                        <a style="float:right;" href="addsection.php"><img src="img/user_add.png" height="30px" style="float:center;" ><br>Add section</a><br><br>
+                                        <a style="float:right; padding-right:10px;" href="addsection.php"><img src="img/user_add.png" height="30px" style="float:center; padding-left:20px;" ><br>Add section</a><br><br>
                                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                         <thead>
                                             <tr>
@@ -166,8 +174,8 @@
                                                     $prof
                                                 </td>                                              
                                                 <td>
-                                                    <a href='editsection.php?ClassID=$id'>Edit</a>
-                                                    <a href='deletesection.php?ClassID=$id'>Delete</a>
+                                                    <a href='editsection.php?ID=$id'>Edit</a>
+                                                    <a href='deletesection.php?ID=$id'>Delete</a>
 
                                                 </td>                       
                                               </tr>";

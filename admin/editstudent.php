@@ -1,10 +1,14 @@
 <?php
 include('connection.php');
 session_start();
+$_GET['StudentID'];
+$studid = $_GET['StudentID']; 
+
 $_SESSION['Username'];
 $admin = $_SESSION['Username'];
-$_GET['StudentID'];
-$o = "SELECT StudentID,Firstname,Lastname,Middlename,Section from student_login ";
+
+
+$o = "SELECT StudentID,Firstname,Lastname,Middlename,Section  from student_login where StudentID = $studid ";
 $result = mysql_query($o);
     while($o = mysql_fetch_array($result)){
 

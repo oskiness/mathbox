@@ -137,7 +137,7 @@ $admin = $_SESSION['Username'];
                                 <div class="row">
                                     <div class="panel-body">
                                         <div class="dataTable_wrapper">
-                                        <a style="float:right; padding-right:10px;" href="addlesson.php"><img src="img/addquiz.png" height="30px" style="float:center; padding-left:20px;" ><br>Add lesson</a><br><br>
+                                        <a style="float:right; padding-right:10px;" href="addlesson.php"><img src="img/user_add.png" height="30px" style="float:center; padding-left:20px;"><br>Add lesson</a><br><br>
                                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                         <thead>
                                             <tr>

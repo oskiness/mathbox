@@ -1,323 +1,224 @@
-<!DOCTYPE html>
-<html>
+<?php
+include('connection.php');
+session_start();
+$_GET['ID'];
+$qid = $_GET['ID'];
+
+
+$_SESSION['Username'];
+$admin = $_SESSION['Username'];
+
+$o = "SELECT ID,Question,Choice1,Choice2,Choice3,Choice4,Answer from tblpretest where ID = $qid ";
+$result = mysql_query($o);
+    while($o = mysql_fetch_array($result)){
+
+                $id = $o['ID'];
+                $ques = $o['Question'];
+                $ch1 = $o['Choice1'];
+                $ch2 = $o['Choice2'];
+                $ch3 = $o['Choice3'];
+                $ch4 = $o['Choice4'];
+                $ans = $o['Answer'];
+            }
+
+
+?>
+
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>MATHBOX</title>    
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Admin page</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="./bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="./bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="./bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
-<style type="text/css">
-body{
-  background-image: url(img/bg1.jpg);
-  background-color: #00BBFF;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  -webkit-background-size:cover;
-  -o-background-size:cover;
-  background-size: cover;
-  overflow: inherit;
-}
-#main-wrap{
-  margin: auto;
-    max-width: 1200px;
-    height: 627px;    
-    border-radius: 8px; 
-    background-color: #FFFFED;    
-    overflow: hidden;
-}
-#sidebar{
-  margin-right: auto;
-  width: 150px;
-  height: 700px;  
-  background-color: #1560BD;  
-  float: left;
-}
-#content{
-  margin-left: auto;
-  width: auto;
-  height: 700px;
-  background-color:#F8F8FF;  
-  overflow:scroll;
-}
-#main-wrap #sidebar #Logo img{
-  display: block;
-    width: 120px;
-    height: 120px;  
-    border-radius: 50%;  
-    margin: 0 auto 30px;
-}
-.homepage img{
-  margin: 0 auto 30px;
-  width: 80px;
-  height:80px;
-  display: block;
-  border-radius: 10px;
-  border: 5px solid:#1164b4;  
-}
-.student img{
-  margin: 0 auto 30px;
-  width: 80px;
-  height:80px;
-  display: block;
-  border-radius: 10px;
-  border: 5px solid:#1164b4;  
-}
-.quiz img{
-  margin: 0 auto 30px;
-  width: 80px;
-  height:80px;
-  display: block;
-  border-radius: 10px;
-}
-.lesson img{
-  margin: 0 auto 30px;
-  width: 80px;
-  height:80px;
-  display: block;
-  border-radius: 10px;
-}
-.progress img{
-  margin: 0 auto 30px;
-  width: 80px;
-  height:80px;
-  display: block;
-  border-radius: 10px;
-}
 
-/* home button*/
-.button-home:hover .homepage img{
--webkit-transform: rotateY(180deg);
--webkit-transform-style: preserve-3d;
-transform: rotateY(180deg);
-transform-style: preserve-3d;
-}
-.button-home .homepage img, .button-home:hover .homepage img {
--webkit-transition: all 0.7s ease;
-transition: all 0.7s ease;
-}
-/* student button*/
-.button-student:hover .student img{
--webkit-transform: rotateY(180deg);
--webkit-transform-style: preserve-3d;
-transform: rotateY(180deg);
-transform-style: preserve-3d;
-}
-.button-student .student img, .button-student:hover .student img {
--webkit-transition: all 0.7s ease;
-transition: all 0.7s ease;
-}
-
-/* lesson button*/
-.button-lesson:hover .lesson img{
--webkit-transform: rotateY(180deg);
--webkit-transform-style: preserve-3d;
-transform: rotateY(180deg);
-transform-style: preserve-3d;
-}
-.button-lesson .lesson img, .button-lesson:hover .lesson img {
--webkit-transition: all 0.7s ease;
-transition: all 0.7s ease;
-}
-
-/* quiz button*/
-.button-quiz:hover .quiz img{
--webkit-transform: rotateY(180deg);
--webkit-transform-style: preserve-3d;
-transform: rotateY(180deg);
-transform-style: preserve-3d;
-}
-.button-quiz .quiz img, .button-quiz:hover .quiz img {
--webkit-transition: all 0.7s ease;
-transition: all 0.7s ease;
-}
-/* progress button*/
-.button-progress:hover .progress img{
--webkit-transform: rotateY(180deg);
--webkit-transform-style: preserve-3d;
-transform: rotateY(180deg);
-transform-style: preserve-3d;
-}
-.button-progress .progress img, .button-progress:hover .progress img {
--webkit-transition: all 0.7s ease;
-transition: all 0.7s ease;
-}
-.content_header{
-  height: 65px;
-  width: auto;
-  background-color: #87CEFA;
-}
-.question-form{
-	border-radius: 8px;
-	background-color: #FFFFFF;
-	margin:auto;
-	width: 300px;
-	height: auto;
-	padding: 10px;
-	background: #ffffff;
-	box-shadow: 3px 3px #B3B2B2;	
-}
-
-.question-form h1{
-	font-family:Verdana, Geneva, sans-serif; 
-  text-align: center;
-  font-size: 20px;
-  color:#3B3C36;
-}
-hr{
-  border: 0 none;
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  background-color:#87CEFA;
-}
-.question-form textarea{
-  border: none;
-  border-radius: 5px;
-  border-bottom: solid 3px #c9c9c9;
-  transition: border 0.5s;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 12px;
-  width: 300px;
-  resize:none;
-}
-
-.question-form input{
-	padding: 10px;
-  border: none;
-  border-radius: 5px;
-  border-bottom: solid 3px #c9c9c9;
-  transition: border 0.5s;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 12px;
-}
-
-/* start da css for da buttons */
-.btn {
-  border: 0 none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 13px;
-  text-decoration: none;
-  margin: 20px;
-  color: #fff;
-  position: relative;
-  display: inline-block;
-}
-
-.btn:active {
-  transform: translate(0px, 5px);
-  -webkit-transform: translate(0px, 5px);
-  box-shadow: 0px 1px 0px 0px;
-}
-
-.blue {
-  background-color: #55acee;
-  box-shadow: 0px 5px 0px 0px #3C93D5;
-}
-
-.blue:hover {
-  background-color: #6FC6FF;
-}
-.red {
-  background-color: #e74c3c;
-  box-shadow: 0px 5px 0px 0px #CE3323;
-}
-
-.red:hover {
-  background-color: #FF6656;
-}
-.quiz_list{
-  margin-left: 85px; 
-  padding: 10px;
-  width: auto;
-  height: auto;
-  border-radius: 8px;
-  background-color: #FFFFFF ;
-  display: inline-block;  
-  box-shadow: 3px 3px #B3B2B2;
-}
-.quiz_list.flat-table{
-  margin: auto;
-  display: block;
-  font-family: sans-serif;
-  -webkit-font-smoothing: antialiased;
-  font-size: 14px;
-  overflow: auto;
-  width: auto;
-}
-.quiz_list h1{
-  font-family:Verdana, Geneva, sans-serif; 
-  text-align: center;
-  font-size: 23px;
-  color:#3B3C36;
-}
-th {
-    border-radius: 5px;
-    background-color: #4d94ff;
-    color: white;
-    font-weight: normal;
-    padding: 9px 14px;
-    text-align: center;
-  }
-  td {
-    border-radius: 5px;
-    background-color: rgb(238, 238, 238);
-    color: rgb(111, 111, 111);
-    padding: 9px 14px;
-  }
-</style>
 <body>
-<div id="main-wrap" class="wrapper">
-	<div id="sidebar" class="wrapper_side"><br>
-    <div id="Logo" class="mathbox_logo"><img src="img/teacher.png"></div>
-    <div class="button-home"><a href="Teacherhome.php" class="homepage"><img src="img/teacher_avatar.png"></a></div>    
-    <div class="button-student"><a href="pendingstudent.php" class="student"><img  src="img/student_avatar.png"></a></div>   
-    <div class="button-quiz"><a href="addquiz.php" class="quiz"><img  src="img/test-quiz.png"></a></div> 
-    <div class="button-progress"><a href="studentstatus.php" class="progress"><img src="img/status.png"></a></div>
-  </div>
 
-  <div id="content" class="content_wrapper">
-    <div class="content_header">          
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="../images/MathBox.png" height="50" width="50"></a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+            
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Welcome Prof, <?php echo $admin ?><i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                  <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <!-- /input-group -->
+                        <li>
+                            <a href="dashboard.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="studentmaintenance.php"><i class="fa fa-table fa-fw"></i> Student List</a>
+                        </li>
+                        <li>
+                            <a href="lessonmaintenance.php"><i class="fa fa-table fa-fw"></i> Lessons List</a>
+                        </li>
+                        <li>
+                            <a href="quizmaintenance.php"><i class="fa fa-table fa-fw"></i> Quiz List</a>
+                        </li>
+                          <li>
+                             <a href="archive.php"><i class="fa fa-wrench fa-fw"></i> Archive<span class="fa arrow"></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="studentarchive.php">Student Archive</a>
+                                </li>
+                                <li>
+                                    <a href="lessonarchive.php">Lesson Archive</a>
+                                </li>
+                                <li>
+                                    <a href="quizarchive.php">Quiz Archive</a>
+                                </li>
+                            </ul>
+                            
+                        </li>
+                    </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Editing Quiz</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form method="POST" action="editquizexe.php">
+                                        <div class="form-group">
+                                            <label>Question</label>
+                                            <textarea name="question" required class="form-control" placeholder="<?php echo $ques ?>"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Choice 1</label>
+                                            <input name="answer1" required class="form-control" placeholder="<?php echo $ch1 ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Choice 2</label>
+                                            <input name="answer2" required class="form-control" placeholder="<?php echo $ch2 ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Choice 3</label>
+                                            <input name="answer3" required class="form-control" placeholder="<?php echo $ch3 ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Choice 4</label>
+                                            <input name="answer4" required class="form-control" placeholder="<?php echo $ch4 ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Correct Answer</label>
+                                            <input name="final_answer" required class="form-control" placeholder="<?php echo $ans ?>">
+                                        </div>
+                                        <button type="submit" name="submit" class="btn btn-default">Add</button>
+                                        <button type="reset" class="btn btn-default">Reset</button>
+                                    </form>
+                                </div>
+                            </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
     </div>
-    <br>    
-    <br><br>
-	<div class="question-form">
-  <center><h1>Edit Your Quiz</h1></center>
-  <hr>
-  <?php 
-           include('connection.php');
-           $ID = $_GET['ID'];
-           $qry = "SELECT ID,Question,Choice1,Choice2,Choice3,Choice4,Answer from tblpretest";
-           $result = mysql_query($qry);
-            while($qry = mysql_fetch_array($result))
-            {
-            $id = $qry['ID'];
-            $Question = $qry['Question'];
-            $Ch1  = $qry['Choice1'];
-            $Ch2  = $qry['Choice2'];
-            $Ch3  = $qry['Choice3'];
-            $Ch4  = $qry['Choice4'];
-            $ans  = $qry['Answer'];
-          }
-            ?>
+        <!-- /#page-wrapper -->
 
-		<form method="post" action="editquizexe.php">
-            <input type="hidden" value="<?php echo $id ?>" name ="ID">
-						<textarea rows="7" cols="50" placeholder="Type your question here ..." value="<?php echo $Question ?>" name="question"></textarea>
-						<br><br>						
-						A:
-						<input rows="1" cols="30" placeholder="First Choice" value="<?php echo $Ch1 ?>" name="answer1" required></input><br><br>
-						B: 
-						<input rows="1" cols="30" placeholder="Second Choice" value="<?php echo $Ch2 ?>" name="answer2" required></input><br><br>
-						C: 
-						<input rows="1" cols="30" placeholder="Third Choice" value="<?php echo $Ch3 ?>" name="answer3" required></input><br><br>
-						D:
-						<input rows="1" cols="30" placeholder="Fourth Choice" value="<?php echo $Ch4 ?>" name="answer4" required></input><br><br>
-						Final Answer:
-						<input rows="1" cols="30" placeholder="Answer" value="<?php echo $ans ?>" name="final_answer" required></input><br><br>
-						<center><button name="submit" type="submit" value="submit" class="btn blue">Update</button>
-				</form>
-			</div>
-	</div>
-</div>	
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="./bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="./bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="./bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="./dist/js/sb-admin-2.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true
+        });
+    });
+    </script>
+
 </body>
+
 </html>

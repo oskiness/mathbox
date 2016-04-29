@@ -98,63 +98,6 @@ $admin = $_SESSION['Username'];
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Adding Student </h1>
-                    <h1 class="page-header">Add Student</h1>
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <form method="POST" action="editteacherexe.php">                                        
-                                        <div class="form-group">
-                                            <label>Firstname</label>
-                                            <input name="firstname" class="form-control" maxlength="30" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Lastname</label>
-                                            <input name="lastname" class="form-control" maxlength="30" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Middle Initials</label>
-                                            <input name="middlename" class="form-control" maxlength="3" optional >
-                                        </div>
-                                         <div class="form-group">
-                                            <label>Date of Birth</label>
-                                            <input name="birthdate" class="form-control"  type="date" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Guardian's Contact Number</label>
-                                            <input name="birthdate" class="form-control"  type="number" maxlength="13" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Assign Section</label>
-                                            <select class="form-control" name="section">
-                                                <?php
-                                                    include('connection.php');
-                                                    $qry = "SELECT Section from tblsection";
-                                                    $rsl = mysql_query($qry);
-                                                    while($qry = mysql_fetch_array($rsl)){
-                                                        $Section = $qry['Section'];
-                                                        ?>                                              
-                                                <option>
-                                                    <?php echo $Section; ?>
-                                                </option>
-                                                        <?php
-                                                    }
-                                                ?>
-
-                                            </select>
-                                        </div>
-                                        <button type="submit" name="submit" class="btn btn-default">Submit</button>
-                                        <button type="reset" class="btn btn-default">Reset</button>
-                                    </form>
-                                </div>
-                            </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
@@ -162,6 +105,10 @@ $admin = $_SESSION['Username'];
                             <div class="row">
                                 <div class="col-lg-6">
                                     <form method="POST" action="addstudentexe.php">
+                                        <div class="form-group">
+                                            <label>Student number</label>
+                                            <input name="firstname" class="form-control" placeholder="Enter number">
+                                        </div>
                                         <div class="form-group">
                                             <label>Firstname</label>
                                             <input name="firstname" class="form-control" placeholder="Enter text">
@@ -183,10 +130,7 @@ $admin = $_SESSION['Username'];
                                                     $rsl = mysql_query($qry);
                                                     while($qry = mysql_fetch_array($rsl)){
                                                         $Section = $qry['Section'];
-                                                        ?>     
-                                                <option>
-                                                    ----Select Section----
-                                                </option>                                           
+                                                        ?>                                               
                                                 <option>
                                                     <?php echo $Section; ?>
                                                 </option>

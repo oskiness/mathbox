@@ -130,7 +130,6 @@ $admin = $_SESSION['Username'];
                                 <div class="row">
                                     <div class="panel-body">
                                         <div class="dataTable_wrapper">
-                                        <a style="float:right;" href="addstudent.php"><img src="img/user_add.png" height="30px" style="float:center;" ><br>Add student</a><br><br>
                                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                         <thead>
                                             <tr>

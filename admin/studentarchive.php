@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+include('connection.php');
+session_start();
+$_SESSION['Username'];
+$admin = $_SESSION['Username'];
+?>
 <html lang="en">
 <head>
 
@@ -50,7 +55,7 @@
             
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        Welcome Prof, <?php echo $admin ?><i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -118,7 +123,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header"><center>Student List</h1>
+                    <h1 class="page-header"><center>Student Archive</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -130,7 +135,6 @@
                                 <div class="row">
                                     <div class="panel-body">
                                         <div class="dataTable_wrapper">
-                                        <a style="float:right;" href="addstudent.php"><img src="img/user_add.png" height="30px" style="float:center;" ><br>Add student</a><br><br>
                                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                         <thead>
                                             <tr>

@@ -1,10 +1,13 @@
 <?php
 include('connection.php');
 session_start();
+$_GET['TeacherID'];
+$teachid = $_GET['TeacherID'];
+
 $_SESSION['Username'];
 $admin = $_SESSION['Username'];
 
-$o = "SELECT TeacherID,Firstname,Lastname,Middlename,Section from teacher_login ";
+$o = "SELECT TeacherID,Firstname,Lastname,Middlename,Email,Section from teacher_login where TeacherID = $teachid ";
 $result = mysql_query($o);
     while($o = mysql_fetch_array($result)){
 
@@ -12,6 +15,7 @@ $result = mysql_query($o);
                 $fname = $o['Firstname'];
                 $lname = $o['Lastname'];
                 $mname = $o['Middlename'];
+                $email = $o['Email'];
                 $section = $o['Section'];
             }
 ?>
@@ -127,6 +131,10 @@ $result = mysql_query($o);
                                         <div class="form-group">
                                             <label>Middlename</label>
                                             <input name="middlename" class="form-control" value="<?php echo $mname ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>EmailAddress</label>
+                                            <input name="email" class="form-control" value="<?php echo $email ?>">
                                         </div>
                                         <div class="form-group">
                                             <label>Assign Section</label>
