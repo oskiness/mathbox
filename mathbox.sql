@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2016-03-08 06:59:37
+Date: 2016-05-16 12:56:31
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -58,30 +58,35 @@ CREATE TABLE `student_login` (
   `Confirm` int(2) DEFAULT NULL,
   `Prof` varchar(50) DEFAULT NULL,
   `Status` varchar(255) DEFAULT NULL,
-  `Active` int(5) DEFAULT NULL,
+  `Active` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`StudentID`,`Username`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15041675 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of student_login
 -- ----------------------------
-INSERT INTO `student_login` VALUES ('3', 'stanley', 'student', 'Stanley', 'Padua', 'Obin', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('4', 'mark', 'student', 'Mark Joshua Angelo', 'Cruz', 'Ramirez', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('5', 'marvin', 'student', 'Marvin', 'Aquino', 'Rodriguez', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('7', 'marcus', 'student', 'Marcus', 'David', 'Tapispisan', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('8', 'carlo', 'student', 'Carlo Juoaquin', 'Dela Cruz', 'Temonerra', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('9', 'janine', 'student', 'Janine Karull', 'Quintos', 'Baguio', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('10', 'daniella', 'student', 'Danielle Betina', 'Bosi', 'Mandapat', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('12', 'juliana', 'student', 'Juliana Celine', 'Cacho', 'Enguerro', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('13', 'angela', 'student', 'Angela', 'Dela Cruz', 'Fernando', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('14', 'kristelann', 'student', 'Kristel Ann', 'Banaria', 'Galicia', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('15', 'jamie', 'student', 'Jamie', 'Castillo', 'Lacsa', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('16', 'alyssa', 'student', 'Alyssa', 'Bereber', 'Layag', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('17', 'daniella', 'student', 'Daniella Kaye', 'Benitez', 'Dela Cruz', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('18', 'jessrael', 'student', 'Jessrael', 'Hingpit', 'Magallanes', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('19', 'mitzi', 'student', 'Mitzi Ruth', 'Prinsipe', 'Padonan', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('20', 'rosario', 'student', 'Rosario', 'Libot', 'Querubin', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
-INSERT INTO `student_login` VALUES ('21', 'jazz', 'student', 'Jazzlyn', 'Solomon', 'Torrecampo', 'HOPE', null, null, null, null, '1', 'Gabby', 'Registered', '1');
+INSERT INTO `student_login` VALUES ('15041605', 'daniella', 'student', 'Danielle Betina', 'Mandapat', 'Bosi', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041607', 'Andrei', 'student', 'Andrei Jan', 'S', 'Labao', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041615', 'Jenrey', 'student', 'Jenrey', 'A', 'Briguel', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041617', 'marcus', 'student', 'Marcus', 'David', 'Tapispisan', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041620', 'Ronk', 'student', 'Jiane Matthew', 'Z', 'Ronk', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041623', 'carlo', 'student', 'Carlo Juoaquin', 'Dela Cruz', 'Temonerra', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041625', 'King', 'student', 'King Clark', 'O', 'Besa', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041629', 'Danielle', 'student', 'Danielle Kaye', null, 'Dela Cruz', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041660', 'jessrael', 'student', 'Jessrael', 'Hingpit', 'Magallanes', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041674', 'Angela', 'student', 'Angela Hope', 'T', 'Urbano', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041676', 'kristelann', 'student', 'Kristel Ann', 'Banaria', 'Galicia', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041678', 'marvin', 'student', 'Marvin', 'Aquino', 'Rodriguez', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041680', 'mitzi', 'student', 'Mitzi Ruth', 'Prinsipe', 'Padonan', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041682', 'mark', 'student', 'Mark Joshua Angelo', 'Cruz', 'Ramirez', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041682', 'rosario', 'student', 'Rosario', 'Libot', 'Querubin', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041686', 'jamie', 'student', 'Jamie', 'Castillo', 'Lacsa', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041687', 'alyssa', 'student', 'Alyssa', 'Bereber', 'Layag', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041688', 'stanley', 'student', 'Stanley Jary R', 'Padua', 'Obin', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041690', 'angela', 'student', 'Angela', 'Dela Cruz', 'Fernando', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041694', 'janine', 'student', 'Janine Karull', 'Quintos', 'Baguio', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041696', 'jazz', 'student', 'Jazzlyn', 'Solomon', 'Torrecampo', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041698', 'juliana', 'student', 'Juliana Celine', 'Cacho', 'Enguerro', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
 
 -- ----------------------------
 -- Table structure for tbllesson
@@ -93,13 +98,20 @@ CREATE TABLE `tbllesson` (
   `Description` varchar(225) DEFAULT NULL,
   `Video` varchar(200) DEFAULT NULL,
   `Confirm` varchar(10) DEFAULT NULL,
+  `Active` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of tbllesson
 -- ----------------------------
-INSERT INTO `tbllesson` VALUES ('1', 'Angles', 'Lines, Shapes Sides,', 'lessons/lesson Angles.swf', '1');
+INSERT INTO `tbllesson` VALUES ('1', 'Angles', 'Lines, Shapes Sides,', 'lessons/lesson Angles.swf', '1', null);
+INSERT INTO `tbllesson` VALUES ('2', 'Central Angles', null, null, null, null);
+INSERT INTO `tbllesson` VALUES ('3', 'Inscribe Angles', null, null, null, null);
+INSERT INTO `tbllesson` VALUES ('4', 'Tangent line', null, null, null, null);
+INSERT INTO `tbllesson` VALUES ('5', 'Common Tangents', null, null, null, null);
+INSERT INTO `tbllesson` VALUES ('6', 'Angels formed by tangents and secants', null, null, null, null);
+INSERT INTO `tbllesson` VALUES ('7', 'Power Theorem', null, null, null, null);
 
 -- ----------------------------
 -- Table structure for tblpretest
@@ -114,7 +126,7 @@ CREATE TABLE `tblpretest` (
   `Choice4` varchar(500) NOT NULL,
   `Answer` varchar(500) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of tblpretest
@@ -146,21 +158,11 @@ CREATE TABLE `tblpretest_holder` (
   `Answer` varchar(500) NOT NULL,
   `Student_Answer` varchar(500) NOT NULL,
   PRIMARY KEY (`pkey`)
-) ENGINE=InnoDB AUTO_INCREMENT=2735 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2755 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of tblpretest_holder
 -- ----------------------------
-INSERT INTO `tblpretest_holder` VALUES ('2725', 'stanley', '1', 'It is the union of two non-collinear rays with a common endpoint?', 'Parallel', 'Bilateral', 'Angle', 'Bisector', 'Angle', 'Angle');
-INSERT INTO `tblpretest_holder` VALUES ('2726', 'stanley', '2', 'An Angle with a measure of equal to 90?? ', 'Obtuse Angle ', 'Acute Angle ', 'Right Angle ', 'Reflex Angle ', 'Right Angle ', 'Right Angle ');
-INSERT INTO `tblpretest_holder` VALUES ('2727', 'stanley', '3', 'An Angle with a measure of less than 90?? ', 'Obtuse Angle ', 'Acute Angle ', 'Right Angle ', 'Reflex Angle ', 'Acute Angle ', 'Right Angle ');
-INSERT INTO `tblpretest_holder` VALUES ('2728', 'stanley', '4', 'Angles having the same measures? ', 'Angle Construction Postulate ', 'Angle Addition Postulate ', 'Angle Measurement Postulate', 'Angle Measurement', 'Angle Measurement Postulate', 'Angle Addition Postulate ');
-INSERT INTO `tblpretest_holder` VALUES ('2729', 'stanley', '5', 'what is your name?', 'Robert estrada', 'eze', 'oski', 'choji', 'Robert estrada', 'oski');
-INSERT INTO `tblpretest_holder` VALUES ('2730', 'stanley', '6', ' What do you call on the common endpoint of an angle?', 'Point', ' Vertex of an Angle ', 'Segments', 'Edge', ' Vertex of an Angle ', 'Segments');
-INSERT INTO `tblpretest_holder` VALUES ('2731', 'stanley', '7', 'what is love?', 'Organ', 'Feelings', 'Emotions', 'Hobby', 'Feelings', 'Emotions');
-INSERT INTO `tblpretest_holder` VALUES ('2732', 'stanley', '8', 'It is the measuring unit of an Angles? ', 'Inches', 'Centimeters ', 'Angle ', 'Degree', 'Degree', 'Angle ');
-INSERT INTO `tblpretest_holder` VALUES ('2733', 'stanley', '9', 'An Angle with a measure of greater than 90? but less than 180?? ', 'Obtuse Angle ', 'Acute Angle ', 'Right Angle ', 'Reflex Angle ', 'Obtuse Angle ', 'Reflex Angle ');
-INSERT INTO `tblpretest_holder` VALUES ('2734', 'stanley', '10', 'It states that to every angle there corresponds a unique real number r where 0<r<180?', 'Angle Construction Postulate ', 'Angle Addition Postulate ', 'Angle Measurement Postulate ', 'Congruent ', 'Angle Measurement Postulate ', 'Angle Addition Postulate ');
 
 -- ----------------------------
 -- Table structure for tblquestion
@@ -200,11 +202,13 @@ CREATE TABLE `tblscore` (
   `Posttest` varchar(255) DEFAULT NULL,
   `Quiz` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`,`Username`)
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of tblscore
 -- ----------------------------
+INSERT INTO `tblscore` VALUES ('1', 'ronk', '3', null, null);
+INSERT INTO `tblscore` VALUES ('2', 'ronk', '3', null, null);
 
 -- ----------------------------
 -- Table structure for tblsection
@@ -214,33 +218,18 @@ CREATE TABLE `tblsection` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Section` varchar(255) DEFAULT NULL,
   `Prof` varchar(255) DEFAULT NULL,
+  `Active` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of tblsection
 -- ----------------------------
-INSERT INTO `tblsection` VALUES ('1', 'Hope', null);
-
--- ----------------------------
--- Table structure for tbltest
--- ----------------------------
-DROP TABLE IF EXISTS `tbltest`;
-CREATE TABLE `tbltest` (
-  `Question_ID` int(15) NOT NULL AUTO_INCREMENT,
-  `Question` varchar(25000) NOT NULL,
-  `Choice_1` varchar(250) NOT NULL,
-  `Choice_2` varchar(250) NOT NULL,
-  `Choice_3` varchar(250) NOT NULL,
-  `Choice_4` varchar(250) NOT NULL,
-  `Answer` varchar(250) NOT NULL,
-  PRIMARY KEY (`Question_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of tbltest
--- ----------------------------
-INSERT INTO `tbltest` VALUES ('1', 'An Angle with a measure of less than 90?? ', '', '', '', '', '');
+INSERT INTO `tblsection` VALUES ('1', 'Hope', null, 'Yes');
+INSERT INTO `tblsection` VALUES ('2', 'Wisdom', null, 'Yes');
+INSERT INTO `tblsection` VALUES ('3', 'Faith', null, 'Yes');
+INSERT INTO `tblsection` VALUES ('4', 'Grace', null, 'Yes');
+INSERT INTO `tblsection` VALUES ('5', 'Integrity', null, 'Yes');
 
 -- ----------------------------
 -- Table structure for teacher_login
@@ -256,10 +245,12 @@ CREATE TABLE `teacher_login` (
   `TeacherImage` varchar(100) DEFAULT NULL,
   `Email` varchar(20) DEFAULT NULL,
   `Section` varchar(20) DEFAULT NULL,
+  `Active` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`TeacherID`,`Username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of teacher_login
 -- ----------------------------
-INSERT INTO `teacher_login` VALUES ('1', 'Prof', 'Prof', 'Fe', 'Ng', 'Dela Cruz', null, 'gabdacasin@gmail.com', 'Wisdom ');
+INSERT INTO `teacher_login` VALUES ('1', 'Prof', 'Prof', 'Fe', 'Ng', 'Dela Cruz', null, 'gabdacasin@gmail.com', 'Wisdom ', 'Yes');
+INSERT INTO `teacher_login` VALUES ('2', '1234', 'asdf', 'Mario', 'pineda', 'marcos', null, 'Mariopineda@yahoo.co', 'Hope', 'Yes');
