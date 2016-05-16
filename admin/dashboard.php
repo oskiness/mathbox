@@ -33,6 +33,38 @@ $admin = $_SESSION['Username'];
 
     <!-- Custom Fonts -->
     <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript"> 
+function date_time(id)
+{
+        date = new Date;
+        year = date.getFullYear();
+        month = date.getMonth();
+        months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
+        d = date.getDate();
+        day = date.getDay();
+        days = new Array('Sunday ,', 'Monday ,', 'Tuesday ,', 'Wednesday ,', 'Thursday ,', 'Friday ,', 'Saturday ,');
+        h = date.getHours();
+        if(h<10)
+        {
+                h = "0"+h;
+        }
+        m = date.getMinutes();
+        if(m<10)
+        {
+                m = "0"+m;
+        }
+        s = date.getSeconds();
+        if(s<10)
+        {
+                s = "0"+s;
+        }
+        result = ''+days[day]+' '+months[month]+' '+d+' '+year+' '+h+':'+m+':'+s ;
+        document.getElementById(id).innerHTML = result;
+        setTimeout('date_time("'+id+'");','1000');
+        return true;
+}
+</script>
 </head>
 
 <body>
@@ -57,7 +89,7 @@ $admin = $_SESSION['Username'];
                 <li class="dropdown">
 
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                       Welcome admin, <?php echo $admin ?> <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                       Welcome Admin, <?php echo $admin ?> <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -121,6 +153,12 @@ $admin = $_SESSION['Username'];
         </nav>
 
         <div id="page-wrapper">
+            <div class="row">
+                 <div style="float:center;padding-left:430px;">
+                    <span id="date_time"></span>
+                    <script type="text/javascript">window.onload = date_time('date_time');</script>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header"><center>Dashboard</h1>

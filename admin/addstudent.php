@@ -45,7 +45,7 @@ $admin = $_SESSION['Username'];
             
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        Welcome Admin, <?php echo $admin ?><i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -107,7 +107,7 @@ $admin = $_SESSION['Username'];
                                     <form method="POST" action="addstudentexe.php">
                                         <div class="form-group">
                                             <label>Student number</label>
-                                            <input name="firstname" class="form-control" placeholder="Enter number">
+                                            <input name="firstname" class="form-control" value="1504-" placeholder="Enter number">
                                         </div>
                                         <div class="form-group">
                                             <label>Firstname</label>

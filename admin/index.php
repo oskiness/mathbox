@@ -35,10 +35,9 @@ $admin = $_SESSION['Username'];
     <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 
+
 <body>
-
     <div id="wrapper">
-
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -48,7 +47,7 @@ $admin = $_SESSION['Username'];
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Mathbox</a>
+                <a href="index.php"><img src="../images/MathBox.png" height="55" width="55"></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -56,7 +55,7 @@ $admin = $_SESSION['Username'];
             
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        Welcome Admin, <?php echo $admin ?><i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -86,7 +85,10 @@ $admin = $_SESSION['Username'];
                             <a href="studentmaintenance.php"><i class="fa fa-table fa-fw"></i> Student Maintenance</a>
                         </li>
                         <li>
-                            <a href="sectionmaintenance.php"><i class="fa fa-edit fa-fw"></i>Section Maintenance</a>
+                            <a href="sectionmaintenance.php"><i class="fa fa-edit fa-fw"></i> Section Maintenance</a>
+                        </li>
+                        <li>
+                            <a href="lessonmaintenance.php"><i class="fa fa-edit fa-fw"></i> Lesson Maintenance</a>
                         </li>
                         <li>
                              <a href="archive.php"><i class="fa fa-wrench fa-fw"></i> Archive<span class="fa arrow"></a>
@@ -104,7 +106,7 @@ $admin = $_SESSION['Username'];
                             
                         </li>
                         <li>
-                            <a href="contentapproval.php"><i class="fa fa-sitemap fa-fw"></i>Content Approval</a>
+                            <a href="contentapproval.php"><i class="fa fa-sitemap fa-fw"></i> Content Approval</a>
                         </li>
                     </ul>
                             <!-- /.nav-second-level -->

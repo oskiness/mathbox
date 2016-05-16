@@ -25,7 +25,7 @@ if($qry1 && $qry2 && $qry3) //checheck if TRUE yung query ko (kung tama)
       {
       $_SESSION['Username'] = $username;
       echo "<script>
-          alert('login Success');location.href='STUDENT/studenthome.php';</script>";
+          alert('login Success');location.href='STUDENT/index.php';</script>";
            //parang form1.show to malilipat sya sa home.php
             //tapos sa home.php gawa ka ng session
       }
