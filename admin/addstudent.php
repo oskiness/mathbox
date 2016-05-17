@@ -106,20 +106,20 @@ $admin = $_SESSION['Username'];
                                 <div class="col-lg-6">
                                     <form method="POST" action="addstudentexe.php">
                                         <div class="form-group">
-                                            <label>Student number</label>
-                                            <input name="firstname" class="form-control" value="1504-" placeholder="Enter number">
+                                            <label>Username</label>
+                                            <input name="Username" class="form-control">
                                         </div>
                                         <div class="form-group">
                                             <label>Firstname</label>
-                                            <input name="firstname" class="form-control" placeholder="Enter text">
+                                            <input name="firstname" class="form-control">
                                         </div>
                                         <div class="form-group">
                                             <label>Lastname</label>
-                                            <input name="lastname" class="form-control" placeholder="Enter text">
+                                            <input name="lastname" class="form-control">
                                         </div>
                                         <div class="form-group">
                                             <label>Middlename</label>
-                                            <input name="middlename" class="form-control" placeholder="Enter text">
+                                            <input name="middlename" class="form-control">
                                         </div>
                                         <div class="form-group">
                                             <label>Assign Section</label>

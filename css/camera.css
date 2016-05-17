@@ -21,7 +21,7 @@
 .camera_wrap {
 	display: none;
 	float: left;
-	position: relative;
+	position: absolute;
 	z-index: 0;
 }
 .camera_wrap img {
@@ -35,7 +35,8 @@
 	z-index: 1;
 }
 .camera_wrap {
-	width: 100%;
+	width: 70%;
+	margin-left: 230px;
 }
 .camera_src {
 	display: none;

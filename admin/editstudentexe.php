@@ -19,20 +19,19 @@ if($result)
         {
           echo "<script>
             alert('already existed');
-            location.href='editteacher.php';
+            location.href='editstudent.php';
           </script>";
         }
         else 
         {
-          mysql_query("UPDATE student_login set Firstname = $fname where Username = $admin");
-          mysql_query("UPDATE student_login set Middlename = $mname where Username = $admin");
-          mysql_query("UPDATE student_login set Lastname = $lname where Username = $admin");
-          mysql_query("UPDATE student_login set Section = $section where Username = $admin");
+
+          mysql_query("UPDATE student_login SET Firstname = $fname, Middlename = $mname, Lastname = $lname, Section = $section WHERE Username = $admin");
+          
       
           echo
           "<script type='text/javascript'>
               alert('Update Successful.');
-              location.href='teachermaintenance.php';
+              location.href='studentmaintenance.php';
           </script>";
           
           

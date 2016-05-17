@@ -1,7 +1,9 @@
 <?php
 			include('connection.php');
 			if(isset($_POST['submit'])){
-
+				
+				$user ='prof';
+				$pass ='prof';
 				$fname	= $_POST['firstname'];
 				$lname	= $_POST['lastname'];
 				$mname	= $_POST['middlename'];
@@ -19,10 +21,10 @@
 					}
 					else
 						{
-							mysql_query("INSERT into teacher_login(Firstname,Lastname,Middlename,Section,Active) values('$fname','$lname','$mname','$section','Yes')");
+							mysql_query("INSERT into teacher_login(Username,Password,Firstname,Lastname,Middlename,Section,Active) values('$user','$pass','$fname','$lname','$mname','$section','Yes')");
 							echo 
 							"<script type='text/javascript'>
-							 alert('Your Have been Add a teacher.');
+							 alert('Successfully add Teacher.');
              				 location.href='teachermaintenance.php';
          					 </script>";
           

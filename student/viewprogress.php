@@ -131,23 +131,25 @@ $admin = $_SESSION['Username'];
                                                 <th>
                                                     Pre Test
                                                 </th> 
-                                                <th>
-                                                    Action
-                                                </th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                          <?php 
                                              include('connection.php');
                                              
-                                             $qry = "SELECT ID,LessonName,Description  from tbllesson ";
+                                             $qry = "SELECT tbllesson.ID,tbllesson.LessonName,tbllesson.Description,tblscore.Posttest,tblscore.Pretest
+                                                    FROM tblscore
+                                                    INNER JOIN tbllesson
+                                                    ON tbllesson.LessonName=tblscore.LessonName";
                                              $result = mysql_query($qry);
-                                                while($qry = mysql_fetch_array($result))
+                                                while($qry= mysql_fetch_array($result))
                                                 {
                                                     $id = $qry['ID'];
                                                     $lesson = $qry['LessonName'];
                                                     $desc = $qry['Description'];
-
+                                                    $post = $qry['Posttest'];
+                                                    $pre = $qry['Pretest'];
+                                                    
                                             echo "
                                                 <tr class='success'>
                                                 <td>
@@ -160,14 +162,11 @@ $admin = $_SESSION['Username'];
                                                     $desc
                                                 </td>
                                                 <td>
-                                                    
+                                                    $post
                                                 </td>
                                                 <td>
-                                                    
-                                                </td>
-                                                <td>
-                                                    <a href='editstudent.php?StudentID=$id'>Start</a>
-                                                </td>                       
+                                                    $pre
+                                                </td>                     
                                               </tr>";
                                               }
 

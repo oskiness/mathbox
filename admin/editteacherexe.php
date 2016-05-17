@@ -26,11 +26,10 @@ if($result)
         }
         else 
         {
-          mysql_query("UPDATE teacher_login set Firstname = $fname where Username = $admin");
-          mysql_query("UPDATE teacher_login set Middlename = $mname where Username = $admin");
-          mysql_query("UPDATE teacher_login set Lastname = $lname where Username = $admin");
-          mysql_query("UPDATE teacher_login set Email = $email where Username = $admin");
-          mysql_query("UPDATE teacher_login set Section = $section where Username = $admin");
+
+          mysql_query("INSERT into student_login(Firsntame,Lastname,Middlename,Email,Section)
+            values('$fname','$lname','$mname','$email','$section')");
+          
       
           echo
           "<script type='text/javascript'>

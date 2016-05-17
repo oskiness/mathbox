@@ -175,11 +175,11 @@ function date_time(id)
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">26</div>
-                                    <div>New students</div>
+                                    <div>New student!</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="addstudent.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -197,11 +197,11 @@ function date_time(id)
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">12</div>
-                                    <div>New Tasks!</div>
+                                    <div>New Teacher!</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="addteacher.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -219,11 +219,11 @@ function date_time(id)
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">124</div>
-                                    <div>New Orders!</div>
+                                    <div>New Section!</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="addsection.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -245,7 +245,7 @@ function date_time(id)
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="contentapproval.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

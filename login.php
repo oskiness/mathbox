@@ -22,7 +22,7 @@
     </div>
         <form action="loginexe.php" method="post" accept-charset="utf-8">
             <div class="input_holder">
-                <span><i class="fa fa-user"></i></span><input type="text" name="username" placeholder="Username" required>
+                <span><i class="fa fa-user"></i></span><input type="text" name="username" placeholder="Username" required autofocus="">
             </div>
             <div class="input_holder">
                 <span><i class="fa fa-lock"></i></span><input type="password" name="password" id="password_field" placeholder="Password" required>

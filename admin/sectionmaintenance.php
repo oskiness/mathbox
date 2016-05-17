@@ -155,13 +155,17 @@ $admin = $_SESSION['Username'];
                                          <?php 
                                              include('connection.php');
                                              
-                                             $qry = "SELECT ID,Section,Prof from tblsection where Active='Yes'";
+                                            $qry = "SELECT tblsection.ID,tblsection.Section,teacher_login.Firstname
+                                                    FROM teacher_login
+                                                    INNER JOIN tblsection
+                                                    ON tblsection.Section=teacher_login.Section";
                                              $result = mysql_query($qry);
                                                 while($qry = mysql_fetch_array($result))
                                                 {
                                                     $id = $qry['ID'];
                                                     $section = $qry['Section'];
-                                                    $prof = $qry['Prof'];
+                                                    $prof = $qry['Firstname'];
+
 
                                             echo "
                                                 <tr class='success'>
