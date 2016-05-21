@@ -1,10 +1,27 @@
 <?php
-include('connection.php');
+include('../connection.php');
 session_start();
+$_GET['StudentID'];
+$studid = $_GET['StudentID']; 
+
 $_SESSION['Username'];
 $admin = $_SESSION['Username'];
-?>
 
+
+$o = "SELECT StudentID,Firstname,Lastname,Middlename,Section  
+      FROM student_login 
+      WHERE StudentID = $studid ";
+
+$result = mysql_query($o);
+    while($o = mysql_fetch_array($result)){
+
+                $id = $o['StudentID'];
+                $fname = $o['Firstname'];
+                $lname = $o['Lastname'];
+                $mname = $o['Middlename'];
+                $section = $o['Section'];
+            }
+?>
 <html lang="en">
 <head>
 
@@ -14,7 +31,7 @@ $admin = $_SESSION['Username'];
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin page</title>
+    <title>Teacher Module</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -131,6 +148,9 @@ $admin = $_SESSION['Username'];
                                 <div class="col-lg-6">
                                     <form method="POST" action="editstudentexe.php">
                                         <div class="form-group">
+                                            <input type="hidden" name="StudentID" class="form-control" value="<?php echo $id ?>">
+                                        </div>
+                                        <div class="form-group">
                                             <label>Firstname</label>
                                             <input name="firstname" class="form-control" value="<?php echo $fname ?>">
                                         </div>
@@ -146,7 +166,7 @@ $admin = $_SESSION['Username'];
                                             <label>Assign Section</label>
                                             <select class="form-control" name="section">
                                                 <?php
-                                                    include('connection.php');
+                                                    include('../connection.php');
                                                     $qry = "SELECT Section from tblsection";
                                                     $rsl = mysql_query($qry);
                                                     while($qry = mysql_fetch_array($rsl)){

@@ -1,5 +1,5 @@
 <?php
-			include('connection.php');
+			include('../connection.php');
 			if(isset($_POST['submit'])){
 
 				$user = $_POST['Username'];

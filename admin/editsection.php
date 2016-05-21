@@ -1,5 +1,5 @@
 <?php
-include('connection.php');
+include('../connection.php');
 session_start();
 $_GET['ID'];
 $CID = $_GET['ID'];
@@ -146,6 +146,7 @@ $result = mysql_query($o);
                             <div class="row">
                                 <div class="col-lg-6">
                                     <form method="POST" action="editsectionexe.php">
+                                        
                                         <div class="form-group">
                                             <label>Section</label>
                                             <select class="form-control" name="section">
@@ -165,7 +166,8 @@ $result = mysql_query($o);
 
                                             </select>
                                         </div>
-                                        <button type="submit" name="submit" class="btn btn-default">Update</button>                                    </form>
+                                        <button type="submit" name="submit" class="btn btn-default">Update</button>
+                                    </form>
                                 </div>
                             </div>
                         <!-- /.panel-body -->

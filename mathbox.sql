@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2016-05-17 10:56:18
+Date: 2016-05-21 19:28:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -53,40 +53,40 @@ CREATE TABLE `student_login` (
   `Section` varchar(20) DEFAULT NULL,
   `EmailAddress` varchar(20) DEFAULT NULL,
   `ContactNumber` int(11) DEFAULT NULL,
-  `Birthdate` datetime DEFAULT NULL,
+  `Birthdate` date DEFAULT NULL,
   `Images` varchar(100) DEFAULT NULL,
   `Confirm` int(2) DEFAULT NULL,
   `Prof` varchar(50) DEFAULT NULL,
   `Status` varchar(255) DEFAULT NULL,
   `Active` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`StudentID`,`Username`)
-) ENGINE=InnoDB AUTO_INCREMENT=15041709 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15041699 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of student_login
 -- ----------------------------
-INSERT INTO `student_login` VALUES ('15041605', 'daniella', 'student', 'Danielle Betina', 'Mandapat', 'Bosi', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041607', 'Andrei', 'student', 'Andrei Jan', 'S', 'Labao', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041615', 'Jenrey', 'student', 'Jenrey', 'A', 'Briguel', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041617', 'marcus', 'student', 'Marcus', 'David', 'Tapispisan', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041620', 'Ronk', 'student', 'Jiane Matthew', 'Z', 'Ronk', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041623', 'carlo', 'student', 'Carlo Juoaquin', 'Dela Cruz', 'Temonerra', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041625', 'King', 'student', 'King Clark', 'O', 'Besa', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041629', 'Danielle', 'student', 'Danielle Kaye', null, 'Dela Cruz', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041660', 'jessrael', 'student', 'Jessrael', 'Hingpit', 'Magallanes', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041674', 'Angela', 'student', 'Angela Hope', 'T', 'Urbano', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041676', 'kristelann', 'student', 'Kristel Ann', 'Banaria', 'Galicia', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041678', 'marvin', 'student', 'Marvin', 'Aquino', 'Rodriguez', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041680', 'mitzi', 'student', 'Mitzi Ruth', 'Prinsipe', 'Padonan', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041682', 'mark', 'student', 'Mark Joshua Angelo', 'Cruz', 'Ramirez', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041682', 'rosario', 'student', 'Rosario', 'Libot', 'Querubin', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041686', 'jamie', 'student', 'Jamie', 'Castillo', 'Lacsa', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041687', 'alyssa', 'student', 'Alyssa', 'Bereber', 'Layag', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041688', 'stanley', 'student', 'Stanley Jary R', 'Padua', 'Obin', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041690', 'angela', 'student', 'Angela', 'Dela Cruz', 'Fernando', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041694', 'janine', 'student', 'Janine Karull', 'Quintos', 'Baguio', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041696', 'jazz', 'student', 'Jazzlyn', 'Solomon', 'Torrecampo', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
-INSERT INTO `student_login` VALUES ('15041698', 'juliana', 'student', 'Juliana Celine', 'Cacho', 'Enguerro', 'Hope', null, null, null, null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041605', 'daniella', 'student', 'Danielle Betina', 'N.', 'Bosi', 'Hope', null, null, '2001-02-21', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041607', 'Andrei', 'student', 'Andrei Jan', 'S.', 'Labao', 'Hope', null, null, '2001-04-10', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041615', 'Jenrey', 'student', 'Jenrey', 'A.', 'Briguel', 'Hope', null, null, '2000-10-11', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041617', 'marcus', 'student', 'Marcus', 'D.', 'Tapispisan', 'Hope', null, null, '2000-12-21', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041620', 'Ronk', 'student', 'Jiane Matthew', 'Z.', 'Ronk', 'Hope', null, null, '2000-04-26', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041623', 'carlo', 'student', 'Carlo Juoaquin', 'SL.', 'Temonerra', 'Hope', null, null, '2001-05-18', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041625', 'King', 'student', 'King Clark', 'O.', 'Besa', 'Hope', null, null, '2001-03-06', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041629', 'Danielle', 'student', 'Danielle Kaye', null, 'Dela Cruz', 'Hope', null, null, '2001-01-05', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041660', 'jessrael', 'student', 'Jessrael', 'M.', 'Magallanes', 'Hope', null, null, '2001-04-15', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041674', 'Angela', 'student', 'Angela Hope', 'T.', 'Urbano', 'Hope', null, null, '2001-10-11', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041676', 'kristelann', 'student', 'Kristel Ann', 'B.', 'Galicia', 'Hope', null, null, '2001-03-31', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041678', 'marvin', 'student', 'Marvin', 'DC.', 'Rodriguez', 'Hope', null, null, '2001-08-05', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041680', 'mitzi', 'student', 'Mitzi Ruth', 'C.', 'Padonan', 'Hope', null, null, '2001-03-14', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041681', 'rosario', 'student', 'Rosario', 'B.', 'Querubin', 'Hope', null, null, '2000-10-22', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041682', 'mark', 'student', 'Mark Joshua Angelo', 'B.', 'Ramirez', 'Hope', null, null, '2000-09-26', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041686', 'jamie', 'student', 'Jamie', 'C.', 'Lacsa', 'Hope', null, null, '2000-09-27', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041687', 'alyssa', 'student', 'Alyssa', 'B.', 'Layag', 'Hope', null, null, '2000-10-28', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041688', 'stanley', 'student', 'Stanley Jary R', 'P.', 'Obin', 'Hope', null, null, '2001-05-14', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041690', 'angela', 'student', 'Angela', 'DC.', 'Fernando', 'Hope', null, null, '2000-09-27', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041694', 'janine', 'student', 'Janine Karull', 'C.', 'Baguio', 'Hope', null, null, '2001-07-14', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041696', 'jazz', 'student', 'Jazzlyn', 'Solomon', 'Torrecampo', 'Hope', null, null, '2000-09-17', null, '1', 'Gabby', 'Registered', 'Yes');
+INSERT INTO `student_login` VALUES ('15041698', 'juliana', 'student', 'Juliana Celine', 'Cacho', 'Enguerro', 'Hope', null, null, '2001-02-28', null, '1', 'Gabby', 'Registered', 'Yes');
 
 -- ----------------------------
 -- Table structure for tbllesson

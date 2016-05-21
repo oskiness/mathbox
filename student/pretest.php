@@ -1,5 +1,5 @@
 <?php
-include('connection.php');
+include('../connection.php');
 session_start();
 $_SESSION['Username'];
 $admin = $_SESSION['Username'];
@@ -111,7 +111,7 @@ $admin = $_SESSION['Username'];
                         <form class="formcss" method="post" action="exe.php">
 
                           <?php 
-                          include('connection.php');
+                          include('../connection.php');
                           $query = "select * from tblpretest";
                           $count = mysql_query($query);
                           $count = mysql_num_rows($count);

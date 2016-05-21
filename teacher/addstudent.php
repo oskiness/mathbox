@@ -1,5 +1,5 @@
 <?php
-include('connection.php');
+include('../connection.php');
 session_start();
 $_SESSION['Username'];
 $admin = $_SESSION['Username'];
@@ -148,7 +148,7 @@ $admin = $_SESSION['Username'];
                                             <label>Assign Section</label>
                                             <select class="form-control" name="section">
                                                 <?php
-                                                    include('connection.php');
+                                                    include('../connection.php');
                                                     $qry = "SELECT Section from tblsection";
                                                     $rsl = mysql_query($qry);
                                                     while($qry = mysql_fetch_array($rsl)){

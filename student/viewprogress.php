@@ -1,5 +1,5 @@
 <?php
-include('connection.php');
+include('../connection.php');
 session_start();
 $_SESSION['Username'];
 $admin = $_SESSION['Username'];
@@ -135,7 +135,7 @@ $admin = $_SESSION['Username'];
                                         </thead>
                                         <tbody>
                                          <?php 
-                                             include('connection.php');
+                                             include('../connection.php');
                                              
                                              $qry = "SELECT tbllesson.ID,tbllesson.LessonName,tbllesson.Description,tblscore.Posttest,tblscore.Pretest
                                                     FROM tblscore

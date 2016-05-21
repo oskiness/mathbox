@@ -1,5 +1,5 @@
 <?php 
-include('connection.php');
+include('../connection.php');
 session_start();
 $ID = $_GET['ID'];
 mysql_query("DELETE FROM tblsection where ID = '$ID'");

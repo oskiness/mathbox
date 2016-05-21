@@ -1,5 +1,5 @@
 <?php
-include('connection.php');
+include('../connection.php');
 session_start();
 $_GET['TeacherID'];
 $teachid = $_GET['TeacherID'];

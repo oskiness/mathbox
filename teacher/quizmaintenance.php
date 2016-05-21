@@ -1,5 +1,5 @@
 <?php
-include('connection.php');
+include('../connection.php');
 session_start();
 $_SESSION['Username'];
 $admin = $_SESSION['Username'];
@@ -163,7 +163,7 @@ $admin = $_SESSION['Username'];
                                         </thead>
                                         <tbody>
                                          <?php 
-                                             include('connection.php');
+                                             include('../connection.php');
                                              
                                              $qry = "SELECT ID,Question,Choice1,Choice2,Choice3,Choice4,Answer  from tblpretest where Active='Yes'";
                                              $result = mysql_query($qry);

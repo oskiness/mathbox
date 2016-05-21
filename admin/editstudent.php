@@ -1,5 +1,5 @@
 <?php
-include('connection.php');
+include('../connection.php');
 session_start();
 $_GET['StudentID'];
 $studid = $_GET['StudentID']; 
@@ -19,6 +19,7 @@ $result = mysql_query($o);
                 $section = $o['Section'];
             }
 ?>
+
 <html lang="en">
 <head>
 
@@ -121,6 +122,9 @@ $result = mysql_query($o);
                             <div class="row">
                                 <div class="col-lg-6">
                                     <form method="POST" action="editstudentexe.php">
+                                        <div class="form-group">
+                                            <input type="hidden" name="StudentID" value="<?php echo $id ?>">
+                                        </div>
                                         <div class="form-group">
                                             <label>Firstname</label>
                                             <input name="firstname" class="form-control" value="<?php echo $fname ?>">

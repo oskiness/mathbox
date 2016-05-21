@@ -1,5 +1,5 @@
 <?php
-include('connection.php');
+include('../connection.php');
 session_start();
 $_SESSION['Username'];
 $admin = $_SESSION['Username'];
@@ -165,7 +165,7 @@ $admin = $_SESSION['Username'];
                                         </thead>
                                         <tbody>
                                          <?php 
-                                             include('connection.php');
+                                             include('../connection.php');
                                              
                                              $qry = "SELECT TeacherID,Username,Password,Firstname,Lastname,Middlename,Email,Section from teacher_login where Active='Yes'";
                                              $result = mysql_query($qry);

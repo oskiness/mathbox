@@ -1,5 +1,5 @@
 <?php
-include('connection.php');
+include('../connection.php');
 session_start();
 $_SESSION['Username'];
 $admin = $_SESSION['Username'];
@@ -164,7 +164,7 @@ $admin = $_SESSION['Username'];
                                         </thead>
                                         <tbody>
                                          <?php 
-                                             include('connection.php');
+                                             include('../connection.php');
                                              
                                              $qry = "SELECT ID,LessonName,Description,Video,Confirm  from tbllesson where Active='Yes' and Confirm = 'Accepted'";
                                              $result = mysql_query($qry);
